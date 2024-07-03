@@ -41,7 +41,7 @@ std::ostream& operator<<(std::ostream& os, const AdressBook& adress_book)
 {
     if (!adress_book.head)
     {
-        os << "Êíèãà ïóñòà" << std::endl;
+        os << "ÃŠÃ­Ã¨Ã£Ã  Ã¯Ã³Ã±Ã²Ã " << std::endl;
     }
     else
     {
@@ -108,9 +108,6 @@ AdressBook& AdressBook::operator=(const AdressBook& other)
         else
         {
             head = new Book;
-            /*head->employee.grade = other.head->employee.grade;
-            head->employee.name = other.head->employee.name;
-            head->employee.id = other.head->employee.id;*/
             head->employee = other.head->employee;
             if (other.head->next_page != nullptr)
             {
@@ -120,9 +117,6 @@ AdressBook& AdressBook::operator=(const AdressBook& other)
                 {
                     temp->next_page = new Book;
                     temp = temp->next_page;
-                    /*temp->employee.name = temp_copy->employee.name;
-                    temp->employee.grade = temp_copy->employee.grade;
-                    temp->employee.id = temp_copy->employee.id;*/
                     temp->employee = temp_copy->employee;
                     temp_copy = temp_copy->next_page;
                 }
